@@ -1,0 +1,66 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Craig Barratt <cbarratt@users.sourceforge.net>
+Source: https://github.com/backuppc/backuppc-xs/releases
+
+Files: *
+Copyright: 2013 Craig Barratt <cbarratt@users.sourceforge.net>.
+License: GPL-3
+
+Files: bpc_hashTable.c rsync.h byteorder.h
+Copyright: 1992-1995 Andrew Tridgell
+	   2007-2008 Wayne Davison
+License: GPL-3
+
+Files: pport.h
+Copyright: 2004-2010, Marcus Holland-Moritz.
+License: Perl
+ This program is free software; you can redistribute it and/or
+ modify it under the same terms as Perl itself.
+
+Files: md5/*
+Copyright: 2001-2003 Christophe Devine
+License: GPL-3
+
+Files: zlib/*
+Copyright: 1995-2005 Jean-loup Gailly and Mark Adler
+License: Zlib
+ This software is provided 'as-is', without any express or implied
+ warranty.  In no event will the authors be held liable for any damages
+ arising from the use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+ .
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+ .
+ Jean-loup Gailly        Mark Adler
+ jloup@gzip.org          madler@alumni.caltech.edu
+ .
+ .
+ The data format used by the zlib library is described by RFCs (Request for
+ Comments) 1950 to 1952 in the files http://www.ietf.org/rfc/rfc1950.txt
+ (zlib format), rfc1951.txt (deflate format) and rfc1952.txt (gzip format).
+
+License: GPL-3
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, visit the http://fsf.org website.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-3'.
