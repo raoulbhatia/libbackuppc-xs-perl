@@ -1,3 +1,20 @@
+backuppc-xs (0.56) stable; urgency=medium
+
+  * 0.56: June 11, 2017
+    - change to Makefile.PL to ensure that parallel builds (make -j N) work with BSD make
+      (pull request #4 from Alexander Moisseev).
+
+ -- Raoul Bhatia <raoul@bhatia.at>  Sat, 11 Jun 2017 12:00:00 +0000
+
+backuppc-xs (0.55) stable; urgency=medium
+
+  * 0.55: June 4, 2017
+    - updated Makefile.PL so ./configure is run before subdirs are built when parallel make (eg: make -j 4) is used
+    - generate error message instead of log message if bpc_poolWrite_unmarkPendingDelete() fails
+    - added & ~S_IFMT to chmod() mode argument
+
+ -- Raoul Bhatia <raoul@bhatia.at>  Sat, 4 Jun 2017 12:00:00 +0000
+
 backuppc-xs (0.53) stable; urgency=medium
 
   * 0.53: March 23, 2017
@@ -12,10 +29,10 @@ backuppc-xs (0.53) stable; urgency=medium
     - added dynamic:: target to subdir Makefile.PLs to fix build issue on gentoo
       (patch submitted by Slaven Rezic; see https://rt.cpan.org/Ticket/Display.html?id=120495)
 
- -- Raoul Bhatia <raoul@bhatia.at>  Sat, 25 Mar 2017 12:16:28 +0100
+ -- Raoul Bhatia <raoul@bhatia.at>  Sat, 25 Mar 2017 12:00:00 +0000
 
 backuppc-xs (0.50) stable; urgency=medium
 
   * Initial release.
 
- -- Raoul Bhatia <raoul@bhatia.at>  Wed, 05 Mar 2017 06:10:13 +0100
+ -- Raoul Bhatia <raoul@bhatia.at>  Wed, 05 Mar 2017 12:00:00 +0000
