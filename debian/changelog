@@ -1,3 +1,12 @@
+backuppc-xs (0.57) stable; urgency=medium
+
+  * 0.57: December 2, 2017
+    - added BackupPC::XS::DirOps::refCountAllInodeMax() and bpc_path_refCountAllInodeMax() to
+      allow BackupPC_refCountAll to get the lagest inode as the backup tree is traversed.
+      Also bumped version to 0.57.
+
+ -- Raoul Bhatia <raoul@bhatia.at>  Sat, 2 Dec 2017 12:00:00 +0000
+
 backuppc-xs (0.56) stable; urgency=medium
 
   * 0.56: June 11, 2017
