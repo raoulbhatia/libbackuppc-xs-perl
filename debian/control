@@ -6,7 +6,7 @@ Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9), autotools-dev
 
 Package: backuppc-xs
-Architecture: amd64
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}
 Description: high-performance, enterprise-grade system for backing up PCs
  BackupPC is disk based and not tape based. This particularity allows
