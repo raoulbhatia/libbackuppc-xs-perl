@@ -25,10 +25,18 @@ WriteMakefile(
     INC               => '-I.', # e.g., '-I. -I/usr/include/other'
     OBJECT            => $object,
     MYEXTLIB          => 'zlib/libzlib$(LIB_EXT) md5/libmd5$(LIB_EXT)',
-    DIR               => ['md5', 'zlib'],
     depend            => { 'BackupPC_XS.o' => 'config.h' },
     clean             => { FILES => "config.log config.status config.h" },
 );
+
+# by Nicholas Clark <nick@ccl4.org>
+# https://github.com/Perl/perl5/commit/4d106cc5d8fd328d39b1db3c57572dd3dec915b5
+#
+# We don't want the default subdir rule, as it creates a race condition with the
+# rule we add below.
+sub MY::subdir_x {
+    return '';
+}
 
 sub MY::postamble {
         return <<'EOF';
@@ -43,11 +51,6 @@ config.h: config.h.in
 	./configure.sh
 
 $(OBJECT) : config.h
-
-#
-# hack to make sure config.h is built before subdirs are entered
-#
-config :: config.h
 
 EOF
 }
