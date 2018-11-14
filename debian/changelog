@@ -4,6 +4,7 @@ libbackuppc-xs-perl (0.54-2) UNRELEASED; urgency=medium
     + Add Tobias Frost and myself to Uploaders.
   * Add Vcs-* headers.
   * Drop uupdate from debian/watch and switch to version 4.
+  * Apply "wrap-and-sort -a".
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:25:22 +0100
 
