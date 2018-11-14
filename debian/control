@@ -1,5 +1,7 @@
 Source: libbackuppc-xs-perl
-Maintainer: Ludovic Drolez <ldrolez@debian.org>
+Maintainer: Debian BackupPC Team <team+pkg-backuppc@tracker.debian.org>
+Uploaders: Axel Beckert <abe@debian.org>,
+           Tobias Frost <tobi@debian.org>
 Section: perl
 Priority: optional
 Standards-Version: 3.9.8
