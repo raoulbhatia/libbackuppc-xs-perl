@@ -14,6 +14,8 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
   * Fix file name typos found by lintian in debian/copyright.
   * Fix unused lintian override by dropping the whole
     debian/libbackuppc-xs-perl.lintian-overrides file.
+  * Rewrite package description to describe the Perl module BackupPC::XS
+    and not BackupPC itself.
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
 
