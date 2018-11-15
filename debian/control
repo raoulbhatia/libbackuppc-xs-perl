@@ -14,6 +14,7 @@ Testsuite: autopkgtest-pkg-perl
 
 Package: libbackuppc-xs-perl
 Architecture: any
+Multi-Arch: same
 Depends: ${misc:Depends},
          ${perl:Depends},
          ${shlibs:Depends}
