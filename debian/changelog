@@ -1,4 +1,4 @@
-libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
+libbackuppc-xs-perl (0.57-1) unstable; urgency=medium
 
   * Adopt package under the Debian BackupPC Team. (Closes: #887491)
     + Add Tobias Frost and myself to Uploaders.
@@ -22,7 +22,7 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
   * Enable all hardening build flags.
   * Declare package to be autopkgtestable.
 
- -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
+ -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 02:56:57 +0100
 
 libbackuppc-xs-perl (0.54-1) unstable; urgency=low
 
