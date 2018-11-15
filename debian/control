@@ -10,6 +10,7 @@ Build-Depends: debhelper (>= 11),
 Homepage: https://github.com/backuppc/backuppc-xs
 Vcs-Git: https://salsa.debian.org/debian/libbackuppc-xs-perl.git
 Vcs-Browser: https://salsa.debian.org/debian/libbackuppc-xs-perl
+Testsuite: autopkgtest-pkg-perl
 
 Package: libbackuppc-xs-perl
 Architecture: any
