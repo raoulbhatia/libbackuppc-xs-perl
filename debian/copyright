@@ -6,12 +6,12 @@ Files: *
 Copyright: 2013 Craig Barratt <cbarratt@users.sourceforge.net>.
 License: GPL-3
 
-Files: bpc_hashTable.c rsync.h byteorder.h
+Files: bpc_hashtable.c rsync.h byteorder.h
 Copyright: 1992-1995 Andrew Tridgell
 	   2007-2008 Wayne Davison
 License: GPL-3
 
-Files: pport.h
+Files: ppport.h
 Copyright: 2004-2010, Marcus Holland-Moritz.
 License: Perl
  This program is free software; you can redistribute it and/or
