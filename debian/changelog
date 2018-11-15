@@ -19,6 +19,7 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
   * Declare compliance with Debian Policy 4.2.1. (No changes needed.)
   * debian/copyright: Use "GPL-3+" instead of "GPL-3" as short name for
     "GPL version 3 or later".
+  * Enable all hardening build flags.
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
 
