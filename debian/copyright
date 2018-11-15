@@ -4,12 +4,12 @@ Source: https://github.com/backuppc/backuppc-xs/releases
 
 Files: *
 Copyright: 2013 Craig Barratt <cbarratt@users.sourceforge.net>.
-License: GPL-3
+License: GPL-3+
 
 Files: bpc_hashtable.c rsync.h byteorder.h
 Copyright: 1992-1995 Andrew Tridgell
 	   2007-2008 Wayne Davison
-License: GPL-3
+License: GPL-3+
 
 Files: ppport.h
 Copyright: 2004-2010, Marcus Holland-Moritz.
@@ -19,7 +19,7 @@ License: Perl
 
 Files: md5/*
 Copyright: 2001-2003 Christophe Devine
-License: GPL-3
+License: GPL-3+
 
 Files: zlib/*
 Copyright: 1995-2005 Jean-loup Gailly and Mark Adler
@@ -48,7 +48,7 @@ License: Zlib
  Comments) 1950 to 1952 in the files http://www.ietf.org/rfc/rfc1950.txt
  (zlib format), rfc1951.txt (deflate format) and rfc1952.txt (gzip format).
 
-License: GPL-3
+License: GPL-3+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 3 of the License, or
