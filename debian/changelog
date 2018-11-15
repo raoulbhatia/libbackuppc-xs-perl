@@ -8,6 +8,8 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
   * Convert to source format "3.0 (quilt)".
   * Import new upstream release 0.57.
     + Refresh patch.
+  * Switch to compat level 11 and drop --with autotools-dev.
+    + Update build-dependencies accordingly.
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
 
