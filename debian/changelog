@@ -16,6 +16,7 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
     debian/libbackuppc-xs-perl.lintian-overrides file.
   * Rewrite package description to describe the Perl module BackupPC::XS
     and not BackupPC itself.
+  * Declare compliance with Debian Policy 4.2.1. (No changes needed.)
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
 

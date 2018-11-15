@@ -4,7 +4,7 @@ Uploaders: Axel Beckert <abe@debian.org>,
            Tobias Frost <tobi@debian.org>
 Section: perl
 Priority: optional
-Standards-Version: 3.9.8
+Standards-Version: 4.2.1
 Build-Depends: debhelper (>= 11),
                zlib1g-dev
 Homepage: https://github.com/backuppc/backuppc-xs
