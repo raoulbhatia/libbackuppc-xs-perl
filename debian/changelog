@@ -10,6 +10,7 @@ libbackuppc-xs-perl (0.57-1) UNRELEASED; urgency=medium
     + Refresh patch.
   * Switch to compat level 11 and drop --with autotools-dev.
     + Update build-dependencies accordingly.
+  * Add Homepage field.
 
  -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 00:51:39 +0100
 
