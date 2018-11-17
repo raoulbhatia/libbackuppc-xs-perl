@@ -1,11 +1,11 @@
-libbackuppc-xs-perl (0.57-2) UNRELEASED; urgency=medium
+libbackuppc-xs-perl (0.57-2) unstable; urgency=medium
 
   * debian/copyright: Update FSF URL by following redirect from
     http://fsf.org to https://www.fsf.org/. Thanks DUCK!
   * Mark binary package as "Multi-Arch: same" as suggested by the
     multiarch hinter.
 
- -- Axel Beckert <abe@debian.org>  Thu, 15 Nov 2018 03:02:08 +0100
+ -- Axel Beckert <abe@debian.org>  Sat, 17 Nov 2018 06:02:35 +0100
 
 libbackuppc-xs-perl (0.57-1) unstable; urgency=medium
 
