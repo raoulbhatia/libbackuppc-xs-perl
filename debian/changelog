@@ -1,6 +1,13 @@
+libbackuppc-xs-perl (0.59-1) unstable; urgency=medium
+
+  * Import new upstream release 0.59.
+
+ -- Raoul Bhatia <raoul@bhatia.eu>  Mon, 08 Apr 2019 09:54:22 +0200
+
 libbackuppc-xs-perl (0.58-1) unstable; urgency=medium
 
   * Import new upstream release 0.58.
+
  -- Raoul Bhatia <raoul@bhatia.at>  Sun, 10 Feb 2019 13:00:02 +0100
 
 libbackuppc-xs-perl (0.57-2) unstable; urgency=medium
