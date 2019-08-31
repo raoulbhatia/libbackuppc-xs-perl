@@ -1,3 +1,9 @@
+libbackuppc-xs-perl (0.59-1) UNRELEASED; urgency=medium
+
+  * Import new upstream version 0.59.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2019 14:49:57 +0200
+
 libbackuppc-xs-perl (0.57-2) unstable; urgency=medium
 
   * debian/copyright: Update FSF URL by following redirect from
