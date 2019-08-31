@@ -2,6 +2,8 @@ libbackuppc-xs-perl (0.59-1) UNRELEASED; urgency=medium
 
   * Import new upstream version 0.59.
   * Declare compliance with Debian Policy 4.4.0. (No changes needed.)
+  * Bump debhelper compatibility level to 12.
+    + Replace debian/compat with a versioned b-d on debhelper-compat.
 
  -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2019 14:49:57 +0200
 
