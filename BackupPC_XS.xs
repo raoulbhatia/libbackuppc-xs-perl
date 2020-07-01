@@ -49,7 +49,7 @@ static HV* convert_file2hv(bpc_attrib_file *file, char *fileName)
     (void)hv_store(rh, "type", 4,     newSVuv(file->type), 0);
     (void)hv_store(rh, "mode", 4,     newSVuv(file->mode), 0);
     (void)hv_store(rh, "size", 4,     newSVuv(file->size), 0);
-    (void)hv_store(rh, "mtime", 5,    newSVuv(file->mtime), 0);
+    (void)hv_store(rh, "mtime", 5,    newSViv(file->mtime), 0);
     (void)hv_store(rh, "inode", 5,    newSVuv(file->inode), 0);
     (void)hv_store(rh, "nlinks", 6,   newSVuv(file->nlinks), 0);
     (void)hv_store(rh, "digest", 6,   newSVpvn((char*)file->digest.digest, file->digest.len), 0);
@@ -90,7 +90,7 @@ static void convert_hv2file(HV *hv, bpc_attrib_file *file)
     hv_get_uint(hv, "type", file->type);
     hv_get_uint(hv, "mode", file->mode);
     hv_get_uint(hv, "size", file->size);
-    hv_get_uint(hv, "mtime", file->mtime);
+    hv_get_int(hv, "mtime", file->mtime);
     hv_get_uint(hv, "inode", file->inode);
     hv_get_uint(hv, "nlinks", file->nlinks);
     hv_get_uint(hv, "compress", file->compress);
@@ -102,21 +102,25 @@ static void convert_hv2file(HV *hv, bpc_attrib_file *file)
         file->digest.len = 0;
     }
     if ( (svp = hv_fetch(hv, "xattr", 5, 0)) && *svp ) {
-        HE *he;
-        HV *hvXattr = (HV*)SvRV(*svp);
-        /*
-         * clear out the old xattrs, and copy in the new
-         */
-        bpc_attrib_xattrDeleteAll(file);
-        hv_iterinit(hvXattr);
-        while ( (he = hv_iternext(hvXattr)) ) {
-            I32 keyLen;
-            STRLEN valueLen;
-            char *key = hv_iterkey(he, &keyLen), *value;
-            SV *valSV = hv_iterval(hvXattr, he);
+        if ( SvTYPE(SvRV(*svp)) != SVt_PVHV ) {
+            bpc_attrib_xattrDeleteAll(file);
+        } else {
+            HE *he;
+            HV *hvXattr = (HV*)SvRV(*svp);
+            /*
+             * clear out the old xattrs, and copy in the new
+             */
+            bpc_attrib_xattrDeleteAll(file);
+            hv_iterinit(hvXattr);
+            while ( (he = hv_iternext(hvXattr)) ) {
+                I32 keyLen;
+                STRLEN valueLen;
+                char *key = hv_iterkey(he, &keyLen), *value;
+                SV *valSV = hv_iterval(hvXattr, he);
 
-            value = SvPV(valSV, valueLen);
-            bpc_attrib_xattrSetValue(file, key, keyLen, value, valueLen);
+                value = SvPV(valSV, valueLen);
+                bpc_attrib_xattrSetValue(file, key, keyLen + 1, value, valueLen);
+            }
         }
     }
 }
@@ -700,6 +704,21 @@ digest(dir)
         }
     }
 
+void
+iterate(dir, idx)
+        BackupPC::XS::Attrib dir;
+        unsigned int idx;
+    PREINIT:
+        bpc_attrib_file *file;
+    PPCODE:
+    {
+        if ( !bpc_attrib_fileIterate(dir, &file, &idx) && file ) {
+            EXTEND(SP, 2);
+            PUSHs(sv_2mortal(newRV_noinc((SV*)convert_file2hv(file, file->name))));
+            PUSHs(sv_2mortal(newSViv(idx)));
+        }
+    }
+
 char*
 errStr(void)
     CODE:
@@ -961,6 +980,22 @@ getFullMangledPath(ac, dirName)
     }
     OUTPUT:
         RETVAL
+
+MODULE = BackupPC::XS		PACKAGE = BackupPC::XS::FileDigest
+
+void
+digest(fileName, compress)
+        char *fileName;
+        int compress;
+    PREINIT:
+    PPCODE:
+    {
+        bpc_digest digest;
+        if ( bpc_fileDigest(fileName, compress, &digest) == 0 ) {
+            EXTEND(SP, 1);
+            PUSHs(sv_2mortal(newSVpvn((char*)digest.digest, digest.len)));
+        }
+    }
 
 MODULE = BackupPC::XS		PACKAGE = BackupPC::XS::DirOps
 
