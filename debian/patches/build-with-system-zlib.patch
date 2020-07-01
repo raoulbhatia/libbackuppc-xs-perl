@@ -3,7 +3,7 @@ Author: Ludovic Drolez <ldrolez@debian.org>
 
 --- a/MANIFEST
 +++ b/MANIFEST
-@@ -46,5 +46,3 @@
+@@ -47,5 +47,3 @@
  zlib/zlib.h
  zlib/zutil.c
  zlib/zutil.h
@@ -11,7 +11,7 @@ Author: Ludovic Drolez <ldrolez@debian.org>
 -META.json                                Module JSON meta-data (added by MakeMaker)
 --- a/Makefile.PL
 +++ b/Makefile.PL
-@@ -20,11 +20,11 @@
+@@ -21,11 +21,11 @@
      VERSION_FROM      => 'lib/BackupPC/XS.pm', # finds $VERSION
      ABSTRACT_FROM     => 'lib/BackupPC/XS.pm', # finds ABSTRACT
      PREREQ_PM         => {}, # e.g., Module::Name => 1.1
@@ -25,7 +25,7 @@ Author: Ludovic Drolez <ldrolez@debian.org>
      depend            => { 'BackupPC_XS.o' => 'config.h' },
      clean             => { FILES => "config.log config.status config.h" },
  );
-@@ -41,8 +41,8 @@
+@@ -42,8 +42,8 @@
  sub MY::postamble {
          return <<'EOF';
  
