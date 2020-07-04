@@ -2,6 +2,7 @@ libbackuppc-xs-perl (0.62-1) UNRELEASED; urgency=medium
 
   * Import new upstream release 0.62.
     + Refresh sole patch.
+  * Bump debhelper-compat to 13.
 
  -- Axel Beckert <abe@debian.org>  Wed, 01 Jul 2020 03:43:01 +0200
 
