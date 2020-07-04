@@ -1,4 +1,4 @@
-libbackuppc-xs-perl (0.62-1) UNRELEASED; urgency=medium
+libbackuppc-xs-perl (0.62-1) unstable; urgency=medium
 
   * Import new upstream release 0.62.
     + Refresh sole patch.
@@ -7,7 +7,7 @@ libbackuppc-xs-perl (0.62-1) UNRELEASED; urgency=medium
   * Declare compliance with Debian Policy 4.5.0. (No changes needed.)
   * debian/copyright: Update ietf.org URL from HTTP to HTTPS. Thanks DUCK!
 
- -- Axel Beckert <abe@debian.org>  Wed, 01 Jul 2020 03:43:01 +0200
+ -- Axel Beckert <abe@debian.org>  Sat, 04 Jul 2020 19:23:24 +0200
 
 libbackuppc-xs-perl (0.59-1) unstable; urgency=medium
 
