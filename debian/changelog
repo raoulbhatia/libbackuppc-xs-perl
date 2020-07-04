@@ -5,6 +5,7 @@ libbackuppc-xs-perl (0.62-1) UNRELEASED; urgency=medium
   * Bump debhelper-compat to 13.
   * Set "Rules-Requires-Root: no".
   * Declare compliance with Debian Policy 4.5.0. (No changes needed.)
+  * debian/copyright: Update ietf.org URL from HTTP to HTTPS. Thanks DUCK!
 
  -- Axel Beckert <abe@debian.org>  Wed, 01 Jul 2020 03:43:01 +0200
 
