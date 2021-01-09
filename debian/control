@@ -5,7 +5,7 @@ Uploaders: Axel Beckert <abe@debian.org>,
 Section: perl
 Priority: optional
 Standards-Version: 4.5.0
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 10),
                zlib1g-dev
 Homepage: https://github.com/backuppc/backuppc-xs
 Vcs-Git: https://salsa.debian.org/debian/libbackuppc-xs-perl.git
